@@ -1,0 +1,29 @@
+let nfts=[];
+function mintNFT(Name, ID,accStatus,Token){
+    let metaData={
+        Name:Name,
+        ID:ID,
+        accStatus:accStatus,
+        Token:Token
+    };
+    nfts.push(metaData);
+}
+function listNFTs(){
+    for(let i=0;i<nfts.length;i++){
+        console.log("Name=", nfts[i].Name);
+        console.log("ID=", nfts[i].ID);
+        console.log("Account Status=",nfts[i].accStatus);
+        console.log("Token=",nfts[i].Token);
+    }
+}
+function getTotalSupply(){
+    console.log("Total numbers of NFTs in the array=",nfts.length);
+}
+mintNFT("Anshika Goel",11678,"Active","Created");
+mintNFT("Vivek",25118,"Inactive","Not Created");
+mintNFT("Vani",13567,"Inactive","Not Created");
+mintNFT("Karan Kundrra",11108,"Active","Created");
+mintNFT("Tejasswi Prakash",10063,"Inactive","Not Created");
+mintNFT("Darshan Raval",18105,"Active","Created");
+listNFTs();
+getTotalSupply();
