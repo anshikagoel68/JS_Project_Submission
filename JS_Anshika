@@ -1,4 +1,4 @@
-let nfts=[];
+let a=[];
 function mintNFT(Name, ID,accStatus,Token){
     let metaData={
         Name:Name,
@@ -6,18 +6,18 @@ function mintNFT(Name, ID,accStatus,Token){
         accStatus:accStatus,
         Token:Token
     };
-    nfts.push(metaData);
+    a.push(metaData);
 }
 function listNFTs(){
-    for(let i=0;i<nfts.length;i++){
-        console.log("Name=", nfts[i].Name);
-        console.log("ID=", nfts[i].ID);
-        console.log("Account Status=",nfts[i].accStatus);
-        console.log("Token=",nfts[i].Token);
+    for(let i=0;i<a.length;i++){
+        console.log("Name=", a[i].Name);
+        console.log("ID=", a[i].ID);
+        console.log("Account Status=",a[i].accStatus);
+        console.log("Token=",a[i].Token);
     }
 }
 function getTotalSupply(){
-    console.log("Total numbers of NFTs in the array=",nfts.length);
+    console.log("Total numbers of NFTs in the array=",a.length);
 }
 mintNFT("Anshika Goel",11678,"Active","Created");
 mintNFT("Vivek",25118,"Inactive","Not Created");
